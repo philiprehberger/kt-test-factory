@@ -1,6 +1,6 @@
 # test-factory
 
-[![CI](https://github.com/philiprehberger/kt-test-factory/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-test-factory/actions/workflows/publish.yml)
+[![Tests](https://github.com/philiprehberger/kt-test-factory/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-test-factory/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/test-factory)](https://central.sonatype.com/artifact/com.philiprehberger/test-factory)
 [![License](https://img.shields.io/github/license/philiprehberger/kt-test-factory)](LICENSE)
 
@@ -11,9 +11,7 @@ Test data generation with builder DSL, traits, and faker utilities.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-dependencies {
-    implementation("com.philiprehberger:test-factory:0.1.2")
-}
+implementation("com.philiprehberger:test-factory:0.1.3")
 ```
 
 ### Maven
@@ -22,7 +20,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>test-factory</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
