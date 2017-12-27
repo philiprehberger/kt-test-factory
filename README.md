@@ -3,6 +3,7 @@
 [![Tests](https://github.com/philiprehberger/kt-test-factory/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-test-factory/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/test-factory)](https://central.sonatype.com/artifact/com.philiprehberger/test-factory)
 [![License](https://img.shields.io/github/license/philiprehberger/kt-test-factory)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Test data generation with builder DSL, traits, and faker utilities.
 
