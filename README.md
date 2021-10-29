@@ -11,7 +11,7 @@ Test data generation with builder DSL, traits, and faker utilities.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-implementation("com.philiprehberger:test-factory:0.1.3")
+implementation("com.philiprehberger:test-factory:0.2.0")
 ```
 
 ### Maven
@@ -20,7 +20,7 @@ implementation("com.philiprehberger:test-factory:0.1.3")
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>test-factory</artifactId>
-    <version>0.1.3</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -53,6 +53,8 @@ val users = userFactory.buildList(10)
 | `sequence { }` | Auto-incrementing value generator |
 | `Faker.name()` / `email()` / `uuid()` | Random test data |
 | `Faker.int(range)` / `pick(vararg)` / `boolean()` | Random values |
+| `Faker.timestamp(from, to)` | Random `Instant` in range |
+| `Faker.date(from, to)` | Random `LocalDate` in range |
 
 ## Development
 
