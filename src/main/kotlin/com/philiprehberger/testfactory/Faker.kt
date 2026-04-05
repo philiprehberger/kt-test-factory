@@ -1,5 +1,8 @@
 package com.philiprehberger.testfactory
 
+import java.time.Instant
+import java.time.LocalDate
+import java.time.temporal.ChronoUnit
 import java.util.UUID
 
 /** Utility for generating random test data. */
@@ -22,4 +25,24 @@ public object Faker {
     public fun <T> pick(vararg values: T): T = values[random.nextInt(values.size)]
     /** Random boolean with probability. */
     public fun boolean(probability: Double = 0.5): Boolean = random.nextDouble() < probability
+
+    /** Random [Instant] between [from] and [to]. Defaults to the past year through now. */
+    public fun timestamp(
+        from: Instant = Instant.now().minus(365, ChronoUnit.DAYS),
+        to: Instant = Instant.now(),
+    ): Instant {
+        val range = to.epochSecond - from.epochSecond
+        val offset = random.nextLong(range + 1)
+        return from.plusSeconds(offset)
+    }
+
+    /** Random [LocalDate] between [from] and [to]. Defaults to the past year through today. */
+    public fun date(
+        from: LocalDate = LocalDate.now().minusYears(1),
+        to: LocalDate = LocalDate.now(),
+    ): LocalDate {
+        val days = to.toEpochDay() - from.toEpochDay()
+        val offset = random.nextLong(days + 1)
+        return from.plusDays(offset)
+    }
 }
